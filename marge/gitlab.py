@@ -123,6 +123,10 @@ class PUT(Command):
     def method(self):
         return requests.put
 
+    @property
+    def call_args(self):
+        return {'data': self.args}
+
 
 class POST(Command):
     @property
